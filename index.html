@@ -274,6 +274,47 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
 .fine{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:rgba(247,243,230,.6);max-width:900px}
 .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--g9);color:#fff;padding:13px 22px;border-radius:99px;font-weight:700;font-size:14.5px;opacity:0;pointer-events:none;transition:.35s;z-index:99;box-shadow:0 14px 40px -12px rgba(0,0,0,.5)}
 .toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ===== dois públicos ===== */
+body:not([data-mode]) [data-m]{display:none!important}
+body[data-mode=c] [data-m=k]{display:none!important}
+body[data-mode=k] [data-m=c]{display:none!important}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px;max-width:760px}
+.wb{display:flex;flex-direction:column;gap:6px;text-decoration:none;padding:20px 22px;border-radius:20px;background:rgba(247,243,230,.08);border:1.5px solid rgba(247,243,230,.28);color:var(--cream);transition:transform .25s,background .25s,border-color .25s;position:relative}
+.wb:hover{transform:translateY(-4px);border-color:var(--y);background:rgba(247,243,230,.14)}
+.wb.y{background:var(--y);color:var(--g9);border-color:var(--y)}
+.wb.y:hover{background:#ffc926}
+.wb small{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.wb b{font-family:var(--head);font-size:clamp(20px,2.4vw,26px);line-height:1.1;font-weight:800;padding-right:30px}
+.wb .ar{position:absolute;right:20px;bottom:20px;font-size:22px;font-weight:700}
+.swap{font:inherit;font-weight:700;font-size:13.5px;background:transparent;border:1.5px solid var(--line);color:var(--g);padding:8px 14px;border-radius:99px;cursor:pointer;display:none;white-space:nowrap}
+.swap:hover{background:var(--g);color:#fff;border-color:var(--g)}
+body[data-mode] .swap{display:inline-block}
+.sh2{display:none}
+@media(max-width:640px){.who{grid-template-columns:1fr}.lg2{display:none}.sh2{display:inline}.swap{padding:7px 11px;font-size:12.5px}.top .wrap{gap:8px}}
+.fld .lbl{font-weight:700;font-size:13.5px;letter-spacing:.02em}
+.pi{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.pi .card{display:flex;flex-direction:column;gap:10px}
+.pi .tg{align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;background:rgba(0,96,43,.1);color:var(--g)}
+.pi .tg.y{background:#FFF4D1;color:#7a5600}
+.pi .big{font-family:var(--head);font-weight:800;font-size:clamp(44px,6vw,72px);line-height:1;color:var(--g);letter-spacing:-.02em}
+.pi .tg.y+.big{color:#c98f00}
+.pi h3{font-size:24px}
+.pi p,.pi li{font-size:15.5px;color:var(--mut)}
+.pi ul{padding-left:18px;display:grid;gap:6px}
+.pinote{margin-top:22px;padding:18px 22px;border-radius:18px;background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--y);font-size:15.5px}
+.pinote b{color:var(--g9)}
+.ro{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.ro>div{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
+.ro h3{font-size:21px;margin-bottom:8px}
+.ro p{font-size:15px;color:var(--mut)}
+.ro .ic{width:40px;height:40px;border-radius:12px;background:rgba(0,96,43,.1);display:grid;place-items:center;margin-bottom:14px;color:var(--g)}
+.cta-end{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.ins-note{margin-top:22px;padding:16px 20px;border-radius:16px;background:rgba(251,185,0,.14);border:1px solid rgba(251,185,0,.5);color:var(--cream);font-size:15px;border-left:6px solid var(--y)}
+.pz .ins{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:14.5px;color:rgba(247,243,230,.88)}
+.pz .ins b{color:var(--y)}
+@media(max-width:980px){.ro{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.pi{grid-template-columns:1fr}.ro{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -283,9 +324,10 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
   <div class="wrap">
     <a href="#topo" aria-label="BrasilGrass, início"><img class="logo" alt="BrasilGrass grama sintética" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAACVCAMAAABxYTApAAAAkFBMVEUUXRqYlRGHsZkgbUH0viHn7d48gVr3346hxrBrnoFHhmBgexNggx+0zsBCflrezGqlrVj+/v4AXib6uQEFYSoAVRssdkv9wQdxpIdKimX1wy388872zE7c6uKox7VXk3DR5NnE28730FX213H66rD44pVPeBVwhRO61MVkmnqTuqSSlBO1pBHJqw/Xsg8saRcMIaTGAAAAMHRSTlP///////////////////////////////////////////////////////////////9Ppz/1AAAi6ElEQVR42u2dCZeiOLuAUculrO6ZT0wQEFnKff///+5mJyuE6p57ulpyzkx3a0CUhzfvnmDRj5cd4y8cE/Q/21831tu117zdrgemH3hsUx8UxtNFD8zLjVMRAX2MwG35AVrHoHlOlMx6YP66EYcwtIzn8h6ELeNwhc0TIEx6YP6yMQxMyRDi/66rG3TKjhDPgbcgZLPlQ0P+Ev6/jZgemG88yhDde8sASMSsrhC4pQcIjzfX+wDwOQDOemD+qgUJAuDgYbBaHULg5gU+HG/jMwYfAXnTJmJ6YL7xSNxC5LlcLp9OYpCAeUCHcAqf18EBkL+BcNQD8xrAIC1muRy4eYKPo40mLF2uy2vAl6QQ9MD8bcC41hUkYviiBMx3DytV/AC+Uh3RUTCstZgemBdZkrChtHwETgFz09UfYjk9b6uHRFIPzCsBEyARc7ROwALGWJEAFS93WfL0wLwOMGjciN5rFTD31dNcpoLBCvv7QNgD84oSBoQ/VsulzRmDBYzuhMFKz2PJeQE9MK8oYYKH3bRGTl5jRQLwgCY/tNk9MK8EDFF7V1cbScvlQV15kPqystDVA/NawCAwLCIGwOtKNZ+QunvFvBxC0EuYF16SkG6LDKWBITWe2ouIF6TuLk3DqQfmtYBB/n/EwSPQpAY2nlU2kE6zxIuXqe30wLwWMDigpMBB/nYXKgxNdaC83Kz2VA/MKy1JyBxCxNyhGgE4KB5gxothIPXAvCIwZE3SLCKsr9ykV4j+srTnQvTAvBoweE1SgtYAe2ckdQVQ+4i80kuYVweGuOhUyxp7eSVxAqj/BS9b9qBTD8xLSRi6JklqLwpIDySCCD5LfdXqgXlZCUMT74iOC+oV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"></a>
     <nav aria-label="Seções">
-      <a href="#prazo">Prazo</a><a href="#camadas">Camadas</a><a href="#posso">Posso?</a><a href="#diagnostico">Diagnóstico</a><a href="#acionar">Acionar</a><a href="#duvidas">Dúvidas</a>
+      <a href="#resumo" data-m="c">Resumo</a><a href="#produto-instalacao" data-m="c">Produto e instalação</a><a href="#camadas" data-m="c">Camadas</a><a href="#antes" data-m="c">Antes de comprar</a>
+      <a href="#prazo" data-m="k">Prazo</a><a href="#rotina" data-m="k">Rotina</a><a href="#posso" data-m="k">Posso?</a><a href="#diagnostico" data-m="k">Diagnóstico</a><a href="#acionar" data-m="k">Atendimento</a><a href="#duvidas" data-m="k">Dúvidas</a>
     </nav>
-    <a class="btn g sm" id="wa-top" href="#" target="_blank" rel="noopener">Falar com a BrasilGrass</a>
+    <span style="display:flex;gap:8px;align-items:center"><button class="swap" id="swap" type="button">Trocar de público</button><a class="btn g sm" id="wa-top" href="#" target="_blank" rel="noopener"><span class="lg2">Falar com a BrasilGrass</span><span class="sh2">WhatsApp</span></a></span>
   </div>
   <div id="prog"></div>
 </header>
@@ -297,51 +339,78 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
   <div class="wrap">
     <div class="eyebrow">Garantia BrasilGrass · Grama para jardim e paisagismo</div>
     <h1>Garantia, <em>camada por camada.</em></h1>
-    <p class="lead">Do fio à base: o que a BrasilGrass cobre, o que cabe a você cuidar e o que não é defeito. Tudo em linguagem de gente.</p>
-    <div class="cta">
-      <a class="btn y" href="#camadas">Ver como funciona
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
-      <a class="btn o" href="#prazo">Calcular meu prazo</a>
+    <p class="lead">Do fio à base: o que a BrasilGrass cobre, o que cabe a você cuidar e o que não é defeito. Tudo em linguagem de gente. Por onde você quer começar?</p>
+    <div class="who" id="who">
+      <a class="wb y" href="#conhecer" data-mode="c"><small>Estou pesquisando</small><b>Quero conhecer a garantia</b><span class="ar">→</span></a>
+      <a class="wb" href="#cliente" data-mode="k"><small>Sou cliente</small><b>Já comprei: cuidados e atendimento</b><span class="ar">→</span></a>
     </div>
   </div>
   <canvas id="grass" aria-hidden="true"></canvas>
   <div class="stats">
-    <div><b>12 meses</b><span>de garantia, contados da data da compra</span></div>
-    <div><b>4 coberturas</b><span>UV, tração, backing e fabricação</span></div>
+    <div><b>12 meses</b><span>de garantia do produto (jardim e paisagismo), da data da compra</span></div>
+    <div><b>90 dias</b><span>de garantia de mão de obra na instalação feita pela BrasilGrass</span></div>
     <div><b>1 canal</b><span>atendimento direto, sem intermediário</span></div>
   </div>
 </div>
 
-<!-- EM 30 SEGUNDOS -->
-<section>
+<!-- RESUMO -->
+<section id="resumo" data-m="c">
   <div class="wrap">
-    <div class="label rv"><i>0</i>Em 30 segundos</div>
-    <h2 class="sec-h rv d1">O essencial da sua garantia.</h2>
-    <p class="sec-p rv d2">Quatro respostas rápidas. Cada uma leva ao detalhe, quando você quiser aprofundar.</p>
+    <div class="label rv"><i>1</i>Garantia em resumo</div>
+    <h2 class="sec-h rv d1">O essencial, em quatro respostas.</h2>
+    <p class="sec-p rv d2">Para quem está escolhendo a grama: o que você leva de garantia, o que precisa cuidar e como funciona a instalação.</p>
     <div class="ov">
-      <a href="#prazo" class="rv"><span class="n">01</span><h3>Qual é o prazo?</h3><p>12 meses de garantia contratual, a partir da data da sua compra. Ela complementa a garantia legal do Código de Defesa do Consumidor.</p><span class="go">Calcular meu prazo →</span></a>
+      <a href="#produto-instalacao" class="rv"><span class="n">01</span><h3>Prazo por modelo</h3><p>Grama para jardim e paisagismo: <b>12 meses</b>, contados da data da compra. Grama decorativa: 3 meses. Outras linhas têm prazo próprio, e o consultor confirma o do modelo que você escolher.</p><span class="go">Ver produto e instalação →</span></a>
       <a href="#camadas" class="rv d1"><span class="n">02</span><h3>O que cobre?</h3><p>Defeitos de fabricação, desbotamento por UV acima de 15%, perda de resistência das fibras e descolamento dos fios do backing.</p><span class="go">Ver camada por camada →</span></a>
-      <a href="#posso" class="rv d2"><span class="n">03</span><h3>Que cuidados?</h3><p>Limpeza com água e sabão neutro, escovação periódica e drenagem livre. Calor, químicos e uso esportivo causam danos que não são de fabricação.</p><span class="go">Posso ou não posso? →</span></a>
-      <a href="#acionar" class="rv d3"><span class="n">04</span><h3>Como é o atendimento?</h3><p>Você fala com a BrasilGrass, identifica a compra e descreve o problema. Nós orientamos os próximos passos e, se preciso, envolvemos o fabricante.</p><span class="go">Montar minha mensagem →</span></a>
+      <a href="#camadas" class="rv d2"><span class="n">03</span><h3>Principais cuidados</h3><p>Limpeza com água e sabão neutro e escovação periódica. Calor intenso, químicos, objetos cortantes e uso profissional ou muito intenso causam danos que não são de fabricação.</p><span class="go">Ver cuidados →</span></a>
+      <a href="#produto-instalacao" class="rv d3"><span class="n">04</span><h3>Produto x instalação</h3><p>São garantias separadas: a do produto (12 meses) e a da instalação feita pela BrasilGrass (90 dias de mão de obra após a conclusão do serviço).</p><span class="go">Entender a diferença →</span></a>
     </div>
+    <div class="cta-end rv"><a class="btn y" id="b-wa3" href="#" target="_blank" rel="noopener">Falar com um consultor</a></div>
+  </div>
+</section>
+
+<!-- PRODUTO x INSTALAÇÃO -->
+<section id="produto-instalacao" class="paper" data-m="c">
+  <div class="wrap">
+    <div class="label rv"><i>+</i>Produto e instalação</div>
+    <h2 class="sec-h rv d1">Duas garantias, cada uma com o seu prazo.</h2>
+    <p class="sec-p rv d2">A garantia do produto cuida da grama. A garantia da instalação cuida do serviço de quem instalou.</p>
+    <div class="pi">
+      <div class="card rv">
+        <span class="tg">Produto</span>
+        <div class="big">12 meses</div>
+        <h3>Garantia do produto</h3>
+        <p>Prazo e cobertura variam conforme a linha adquirida. Para a grama de jardim e paisagismo, são 12 meses contados da data da compra (pagamento do pedido), não da instalação.</p>
+        <ul><li>Defeitos de fabricação</li><li>Desbotamento por UV acima de 15%</li><li>Perda de resistência das fibras</li><li>Descolamento dos fios do backing</li></ul>
+      </div>
+      <div class="card rv d1">
+        <span class="tg y">Instalação feita pela BrasilGrass</span>
+        <div class="big">90 dias</div>
+        <h3>Garantia de mão de obra</h3>
+        <p>Contada da conclusão do serviço, para falhas de execução. Quando a instalação foi nossa, você fala direto com a BrasilGrass.</p>
+        <ul><li>Emendas abertas</li><li>Falhas de fixação</li><li>Problemas de acabamento</li></ul>
+      </div>
+    </div>
+    <div class="pinote rv"><b>Base e drenagem:</b> são avaliadas considerando o que foi contratado e a causa do problema. <b>Instalação por outro profissional:</b> a responsabilidade é avaliada conforme a causa, e a garantia do produto segue valendo para defeitos sem relação com o serviço. Cada ocorrência passa por avaliação, e seus direitos como consumidor, previstos na Lei nº 8.078/1990, são preservados.</div>
   </div>
 </section>
 
 <!-- 01 PRAZO -->
-<section id="prazo" class="paper">
+<section id="prazo" class="paper" data-m="k">
   <div class="wrap">
     <div class="label rv"><i>1</i>Prazo</div>
     <h2 class="sec-h rv d1">Seu relógio começa no dia da compra.</h2>
-    <p class="sec-p rv d2">Informe o dia da compra (quando o pedido foi pago) e veja até quando vai sua garantia, além de um calendário de escovação para manter a grama em dia.</p>
+    <p class="sec-p rv d2">Informe o dia da compra (quando o pedido foi pago) e veja até quando vai sua garantia, além de um calendário de escovação para manter a grama em dia. Sem nota fiscal? Sem problema: localizamos sua compra pelo número do pedido ou pelo comprovante de pagamento.</p>
     <div class="pz">
       <div class="card rv">
         <div class="fld"><label for="nf">Data da compra (pagamento do pedido)</label><input type="date" id="nf"></div>
-        <div class="fld"><legend>Como é o uso da área?</legend>
+        <div class="fld"><span class="lbl">Como é o uso da área?</span>
           <div class="seg" role="radiogroup" aria-label="Frequência de escovação">
             <div><input type="radio" name="uso" id="u60" value="60" checked><label for="u60">Residencial leve<small>escovar a cada 60 dias</small></label></div>
             <div><input type="radio" name="uso" id="u30" value="30"><label for="u30">Comercial ou tráfego moderado<small>escovar a cada 30 dias</small></label></div>
           </div>
         </div>
+        <div class="fld"><label for="ins">Instalação feita pela BrasilGrass? Data de conclusão do serviço (opcional)</label><input type="date" id="ins"></div>
         <p class="note">Escove com vassoura de cerdas sintéticas macias, sempre no sentido contrário ao deitamento dos fios. A data fica salva só no seu navegador.</p>
       </div>
       <div class="res rv d1" id="res" aria-live="polite"></div>
@@ -349,10 +418,27 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
   </div>
 </section>
 
-<!-- 02 CAMADAS -->
-<section id="camadas">
+<!-- ROTINA -->
+<section id="rotina" data-m="k">
   <div class="wrap">
-    <div class="label rv"><i>2</i>Camadas</div>
+    <div class="label rv"><i>2</i>Rotina de cuidados</div>
+    <h2 class="sec-h rv d1">Limpeza e escovação sem complicação.</h2>
+    <p class="sec-p rv d2">Você mesmo pode fazer. Anotar a data das limpezas ajuda na análise, mas não é obrigatório.</p>
+    <div class="ro">
+      <div class="rv"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 6.500 6 10a6 6 0 01-12 0c0-3.500 3-6 6-10z"/></svg></div><h3>Limpeza de rotina</h3><p>Varra folhas e poeira com vassoura de cerdas sintéticas macias. Para manchas, água e sabão neutro, enxaguando bem.</p></div>
+      <div class="rv d1"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l8-16 8 16M7.500 14h9"/></svg></div><h3>Escovação</h3><p>Escove com cerdas macias, sempre contra o sentido de deitamento dos fios. A frequência sugerida está no calendário do prazo; aumente se houver muito uso ou acúmulo de resíduos.</p></div>
+      <div class="rv d2"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg></div><h3>Água da chuva</h3><p>A grama deixa a água passar, mas o escoamento depende da base e do caimento do piso. Se ficar poça depois da chuva, fale com a gente: avaliamos a base.</p></div>
+      <div class="rv"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 4 5 5 5 10a5 5 0 01-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-9z"/></svg></div><h3>Calor e fogo</h3><p>A grama não propaga chama, mas o calor intenso pode derreter e danificar os fios. Mantenha brasas, churrasqueiras, velas e cigarros afastados, e atenção ao reflexo de vidros e espelhos.</p></div>
+      <div class="rv d1"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V8a5 5 0 0110 0v13M5 21h14"/></svg></div><h3>Piscina, pets e produtos</h3><p>Após contato com água clorada ou produtos químicos, enxágue com água limpa. Em áreas pet, recolha as fezes e enxágue a urina.</p></div>
+      <div class="rv d2"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="9" rx="2"/><path d="M7 18v2M17 18v2"/></svg></div><h3>Móveis e peso</h3><p>Distribua o peso de vasos e móveis com chapas ou protetores e mude de lugar de vez em quando. Evite arrastar objetos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CAMADAS -->
+<section id="camadas" data-m="c">
+  <div class="wrap">
+    <div class="label rv"><i>3</i>Camadas</div>
     <h2 class="sec-h rv d1">Toque numa camada.</h2>
     <p class="sec-p rv d2">Sua grama é um conjunto: fios, backing e a base onde ela foi instalada. A garantia olha para cada uma de um jeito.</p>
     <div class="an">
@@ -390,7 +476,7 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
             <rect x="52" y="168" width="82" height="30" rx="15" fill="#F7F3E6"/><text x="93" y="188" text-anchor="middle" fill="#10261A" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="13" letter-spacing="2">FIOS</text>
           </g>
         </svg>
-        <p class="note" style="text-align:center;margin-top:4px">Clique ou use o teclado (Tab + Enter). As gotas mostram a água saindo pelos furos de drenagem.</p>
+        <p class="note" style="text-align:center;margin-top:4px">Clique ou use o teclado (Tab + Enter). As gotas mostram a água atravessando a grama.</p>
       </div>
       <div class="rv d1">
         <div class="tabs" role="tablist" aria-label="Camadas">
@@ -405,7 +491,7 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
 </section>
 
 <!-- 03 POSSO -->
-<section id="posso" class="dark">
+<section id="posso" class="dark" data-m="k">
   <div class="wrap">
     <div class="label rv"><i>3</i>Cuidados</div>
     <h2 class="sec-h rv d1">Posso ou não posso?</h2>
@@ -423,7 +509,7 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
 </section>
 
 <!-- 04 DIAGNÓSTICO -->
-<section id="diagnostico">
+<section id="diagnostico" data-m="k">
   <div class="wrap">
     <div class="label rv"><i>4</i>Diagnóstico</div>
     <h2 class="sec-h rv d1">Notei algo na minha grama.</h2>
@@ -440,26 +526,28 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
 </section>
 
 <!-- 05 ACIONAR -->
-<section id="acionar" class="dark">
+<section id="acionar" class="dark" data-m="k">
   <div class="wrap">
     <div class="label rv"><i>5</i>Atendimento</div>
     <h2 class="sec-h rv d1">Precisou? Quatro passos.</h2>
     <p class="sec-p rv d2">Você fala com a BrasilGrass diretamente. Quanto mais informação no primeiro contato, mais rápida a análise.</p>
     <div class="steps">
-      <div class="st rv"><b>1</b><div><h3>Reúna</h3><p>Número do pedido ou comprovante de pagamento, modelo e data de entrega ou instalação.</p></div></div>
+      <div class="st rv"><b>1</b><div><h3>Reúna</h3><p>Número do pedido ou comprovante de pagamento (a nota fiscal só se foi emitida), modelo, data da compra e, se houve, data da instalação.</p></div></div>
       <div class="st rv d1"><b>2</b><div><h3>Envie</h3><p>Descrição do problema, fotos gerais e de perto e, se possível, um vídeo curto.</p></div></div>
       <div class="st rv d2"><b>3</b><div><h3>Avaliamos</h3><p>Análise técnica, com pedido de mais informações, inspeção e, se preciso, o fabricante.</p></div></div>
-      <div class="st rv d3"><b>4</b><div><h3>Solução</h3><p>Confirmado o defeito coberto, reparo ou substituição do material, sem custo pelo material.</p></div></div>
+      <div class="st rv d3"><b>4</b><div><h3>Solução</h3><p>Confirmado o defeito coberto, reparo ou substituição do material, sem custo pelo material. Custos de instalação são avaliados caso a caso.</p></div></div>
     </div>
+    <div class="ins-note rv"><b>Instalação feita pela BrasilGrass?</b> Ela tem garantia de mão de obra de 90 dias após a conclusão do serviço. Para emendas abertas, falhas de fixação ou acabamento, fale direto com a gente: avaliamos cada caso considerando o que foi contratado.</div>
     <div class="bd">
       <div class="card rv" id="builder">
         <h3 style="font-size:28px;margin-bottom:18px">Monte sua mensagem</h3>
         <div class="fld"><label for="f-nome">Seu nome</label><input id="f-nome" autocomplete="name" placeholder="Nome e sobrenome"></div>
         <div class="fld"><label for="f-ped">Número do pedido ou comprovante de pagamento</label><input id="f-ped" placeholder="Ex.: pedido 12345"></div>
         <div class="fld"><label for="f-mod">Modelo da grama</label><input id="f-mod" placeholder="Ex.: o nome do modelo que está na nota"></div>
-        <div class="fld"><label for="f-dat">Data de entrega ou instalação</label><input type="date" id="f-dat"></div>
+        <div class="fld"><label for="f-dat">Data da compra ou da entrega</label><input type="date" id="f-dat"></div>
+        <div class="fld"><label for="f-ins">Quem fez a instalação?</label><select id="f-ins"><option value="">Não sei / ainda não instalei</option><option value="BrasilGrass">A BrasilGrass</option><option value="outro profissional">Outro profissional</option><option value="eu mesmo">Eu mesmo</option></select></div>
         <div class="fld"><label for="f-desc">O que aconteceu?</label><textarea id="f-desc" placeholder="Conte o que viu, quando percebeu e como a área é usada."></textarea></div>
-        <div class="fld" style="margin-bottom:0"><legend>Vou enviar</legend>
+        <div class="fld" style="margin-bottom:0"><span class="lbl">Vou enviar</span>
           <div class="chk" id="chk">
             <label><input type="checkbox" value="foto geral do ambiente" checked>Foto geral do ambiente</label>
             <label><input type="checkbox" value="fotos de perto do problema" checked>Fotos de perto do problema</label>
@@ -473,7 +561,7 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
         <div class="pv" id="pv"></div>
         <div class="acts">
           <a class="btn y" id="b-wa" href="#" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.800-1.100-4.600-3.900-4.700-4.100-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.200c.2-.3.5-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .6l-.4.600c-.2.200-.3.400-.1.700.2.300.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.400.3.100.5.100.7-.1l.9-1c.2-.3.4-.2.600-.1l1.800.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 01-13.400 7.800L3 21l1.300-4.400A9 9 0 1121 12z"/></svg>
             Abrir no WhatsApp</a>
           <a class="btn o" id="b-em" href="#">Enviar por e-mail</a>
           <button class="btn o" id="b-cp" type="button">Copiar texto</button>
@@ -484,7 +572,7 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
 </section>
 
 <!-- 06 DÚVIDAS -->
-<section id="duvidas" class="paper">
+<section id="duvidas" class="paper" data-m="k">
   <div class="wrap">
     <div class="label rv"><i>6</i>Dúvidas</div>
     <h2 class="sec-h rv d1">Pergunte à vontade.</h2>
@@ -499,7 +587,7 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
 </section>
 
 <!-- ANTES DE COMPRAR -->
-<section id="antes">
+<section id="antes" data-m="c">
   <div class="wrap">
     <div class="label rv"><i>7</i>Antes de comprar</div>
     <h2 class="sec-h rv d1">Três confirmações que evitam surpresas.</h2>
@@ -507,14 +595,15 @@ footer{background:var(--g9);color:var(--cream);padding:70px 0 40px}
       <div class="rv">
         <div class="pre" id="pre">
           <label><input type="checkbox"><div><b>O modelo combina com o seu ambiente</b><span>Confirme com o consultor qual modelo é indicado para o local e para a intensidade de uso.</span></div></label>
-          <label><input type="checkbox"><div><b>Você quer grama de jardim e paisagismo</b><span>Esta garantia vale para uso paisagístico e de lazer contemplativo. Decorativa, esporte e áreas especiais têm linha e garantia próprias.</span></div></label>
-          <label><input type="checkbox"><div><b>As condições da instalação estão claras</b><span>Se o serviço for contratado, pergunte como funciona. A base deve ser concreto, asfalto ou pó de pedra compactado.</span></div></label>
+          <label><input type="checkbox"><div><b>Você quer grama de jardim e paisagismo</b><span>Esta garantia vale para uso paisagístico e de lazer, inclusive jogar bola em casa com cuidado. Decorativa, uso esportivo profissional e áreas especiais têm linha e garantia próprias.</span></div></label>
+          <label><input type="checkbox"><div><b>As condições da instalação estão claras</b><span>Se o serviço for contratado, pergunte como funciona: a instalação feita pela BrasilGrass tem garantia de mão de obra de 90 dias após a conclusão. A base deve ser concreto, asfalto ou pó de pedra compactado.</span></div></label>
         </div>
         <div class="meter"><div class="bar"><i id="mb"></i></div><span id="mt">0 de 3</span></div>
       </div>
       <div class="rv d1">
         <p class="sec-p" style="margin:0 0 18px;color:var(--ink)">Na BrasilGrass você recebe orientação para escolher a grama certa e atendimento direto para qualquer questão de garantia. A cobertura contratual pode variar conforme a linha: por isso, confirme as condições do modelo antes de comprar.</p>
         <div class="done" id="done"><p><b>Tudo confirmado.</b> Agora é só falar com um consultor para fechar com tranquilidade.</p><a class="btn y" id="b-wa2" href="#" target="_blank" rel="noopener">Falar com um consultor</a></div>
+        <div class="cta-end"><a class="btn y" id="b-wa4" href="#" target="_blank" rel="noopener">Falar com um consultor</a></div>
       </div>
     </div>
   </div>
@@ -547,6 +636,7 @@ function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localSto
 
 /* links WhatsApp fixos */
 $("#wa-top").href=wa("Olá, BrasilGrass! Tenho uma dúvida sobre a garantia da minha grama.");
+$("#b-wa3").href=$("#b-wa4").href=wa("Olá, BrasilGrass! Quero falar com um consultor sobre grama de jardim e paisagismo.");
 $("#b-wa2").href=wa("Olá, BrasilGrass! Quero tirar dúvidas antes de comprar grama de jardim e paisagismo.");
 
 /* reveal + progresso + scrollspy */
@@ -557,7 +647,29 @@ function onScroll(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHe
 window.addEventListener("scroll",onScroll,{passive:true});onScroll();
 var links=$$(".top nav a");
 var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});
-["prazo","camadas","posso","diagnostico","acionar","duvidas"].forEach(function(id){spy.observe($("#"+id))});
+["resumo","produto-instalacao","camadas","antes","prazo","rotina","posso","diagnostico","acionar","duvidas"].forEach(function(id){var e=$("#"+id);if(e)spy.observe(e)});
+
+
+/* ============ PÚBLICO (modos) ============ */
+var ID1={c:"resumo",k:"prazo"},HM={conhecer:"c",cliente:"k"};
+function setMode(m){
+  if(m)document.body.setAttribute("data-mode",m);else document.body.removeAttribute("data-mode");
+  document.title=m==="c"?"Conheça a garantia BrasilGrass":m==="k"?"Cuidados e atendimento | BrasilGrass":"Garantia BrasilGrass: camada por camada";
+}
+function goto(el,instant){if(!el)return;requestAnimationFrame(function(){var y=el.getBoundingClientRect().top+window.pageYOffset-68;window.scrollTo({top:y,behavior:(reduce||instant)?"auto":"smooth"})})}
+function pick(m,hash){setMode(m);try{history.replaceState(null,"",hash)}catch(e){}goto($("#"+ID1[m]))}
+$$("[data-mode]").forEach(function(a){if(a.tagName==="A")a.addEventListener("click",function(e){e.preventDefault();pick(a.getAttribute("data-mode"),a.getAttribute("href"))})});
+$("#swap").addEventListener("click",function(){setMode(null);try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}window.scrollTo({top:0,behavior:reduce?"auto":"smooth"})});
+document.addEventListener("click",function(e){
+  var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a||a.hasAttribute("data-mode"))return;
+  var h=a.getAttribute("href");if(h.length<2)return;var t=$(h);if(!t)return;
+  var box=t.closest("[data-m]");if(box&&document.body.getAttribute("data-mode")!==box.getAttribute("data-m")){e.preventDefault();setMode(box.getAttribute("data-m"));goto(t)}
+});
+(function(){
+  var h=(location.hash||"").slice(1);if(!h)return;
+  if(HM[h]){setMode(HM[h]);goto($("#"+ID1[HM[h]]),true);return}
+  var t=$("#"+h);if(!t)return;var box=t.closest("[data-m]");if(box){setMode(box.getAttribute("data-m"));goto(t,true)}
+})();
 
 /* ============ HERO: grama ============ */
 (function(){
@@ -597,7 +709,7 @@ var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInte
 })();
 
 /* ============ PRAZO ============ */
-var nfEl=$("#nf"),res=$("#res");
+var nfEl=$("#nf"),insEl=$("#ins"),res=$("#res");
 function addMonths(d,m){var x=new Date(d.getFullYear(),d.getMonth()+m,d.getDate());if(x.getDate()!==d.getDate())x.setDate(0);return x}
 function parseD(v){if(!v)return null;var p=v.split("-");return new Date(+p[0],+p[1]-1,+p[2])}
 var fmt=function(d){return d.toLocaleDateString("pt-BR")};
@@ -618,14 +730,19 @@ function renderRes(){
   var months="";for(i=1;i<=12;i++)months+="<span>"+i+"</span>";
   var nx=nexts.length&&el>=0&&left>=0?'<div class="next-list">'+nexts.map(function(x,j){return '<div><span>'+(j===0?"Próxima escovação":"Depois")+'</span><b>'+fmt(x)+'</b></div>'}).join("")+'</div>':"";
   var leg90=new Date(start.getFullYear(),start.getMonth(),start.getDate()+90);
+  var insD=parseD(insEl.value),insHtml="";
+  if(insD&&!isNaN(insD)){var insEnd=new Date(insD.getFullYear(),insD.getMonth(),insD.getDate()+90),insLeft=Math.round((insEnd-today)/864e5);
+    insHtml='<div class="ins"><b>Garantia de mão de obra da instalação BrasilGrass: até '+fmt(insEnd)+'.</b> '+(insLeft>=0?'Faltam '+insLeft+' dia'+(insLeft===1?'':'s')+' (90 dias após a conclusão do serviço, em '+fmt(insD)+').':'Os 90 dias após a conclusão do serviço terminaram, mas fale com a gente: cada caso é avaliado e seus direitos legais continuam valendo.')+'</div>'}
   res.innerHTML='<div class="k">'+kick+'</div><div class="big">'+head+'</div><div class="sub">'+sub+'</div>'+
    '<div class="track"><div class="fill" id="fill"></div>'+ticks+'</div><div class="months">'+months+'</div>'+
    '<div class="legend"><span><i></i>escovação sugerida</span><span>mês de garantia</span></div>'+nx+
-   '<div class="legal">Garantia legal (CDC): para vícios aparentes em produtos duráveis, o prazo para reclamar é de 90 dias, contados da entrega. Se a entrega foi no dia da compra ('+fmt(start)+'), isso vai até '+fmt(leg90)+'. Vícios ocultos contam do momento em que o problema aparece.</div>';
+   insHtml+'<div class="legal">Garantia legal (CDC): para vícios aparentes em produtos duráveis, o prazo para reclamar é de 90 dias, contados da entrega. Se a entrega foi no dia da compra ('+fmt(start)+'), isso vai até '+fmt(leg90)+'. Vícios ocultos contam do momento em que o problema aparece.</div>';
   var f=$("#fill");requestAnimationFrame(function(){requestAnimationFrame(function(){f.style.width=(pct*100)+"%"})});
   var nextOff=null;$$(".tick",res).forEach(function(t){if(nextOff===null&&!t.classList.contains("past")){t.classList.add("next");nextOff=1}});
 }
 nfEl.addEventListener("input",function(){store("bg_nf",nfEl.value);renderRes();buildMsg()});
+insEl.addEventListener("input",function(){store("bg_ins",insEl.value);renderRes()});
+var sins=store("bg_ins");if(sins){insEl.value=sins}
 $$("input[name=uso]").forEach(function(r){r.addEventListener("change",renderRes)});
 var saved=store("bg_nf");if(saved){nfEl.value=saved}
 renderRes();
@@ -645,10 +762,10 @@ renderRes();
     n:["Achatamento e acomodação dos fios com o uso","Fibrilação e pequena liberação de partículas dentro do normal","Fios derretidos por calor ou manchados por tinta, solvente ou cloro"]},
    backing:{t:"O backing",d:"A base da própria grama, onde os fios são presos. Tem furos que deixam a água passar.",
     c:["Descolamento dos fios do backing","Defeitos de fabricação do backing"],
-    u:["Manter os furos de drenagem livres de terra e folhas","Lavadora de alta pressão só com jato em leque, a 1 metro ou mais, longe de emendas e bordas","Evitar objetos perfurantes, cortantes ou abrasivos"],
-    n:["Furos entupidos por terra, folhas ou sujeira acumulada","Cortes e perfurações por objetos","Reparos ou modificações feitos sem avisar a BrasilGrass"]},
+    u:["Varrer folhas e sujeira com vassoura macia, sem arrastar objetos","Lavadora de alta pressão só com jato em leque, a 1 metro ou mais, longe de emendas e bordas","Evitar objetos perfurantes, cortantes ou abrasivos"],
+    n:["Danos por produtos químicos incompatíveis","Cortes e perfurações por objetos","Reparos ou modificações feitos sem avisar a BrasilGrass"]},
    base:{t:"A base de instalação",d:"O piso preparado onde a grama é instalada. Não faz parte do produto, mas decide muito do resultado.",
-    c:["A base não faz parte da grama: por isso a garantia do produto não cobre problemas que nascem dela"],
+    c:["A base não faz parte da grama: problemas de base e drenagem são avaliados considerando o que foi contratado e a causa","Instalação feita pela BrasilGrass: 90 dias de garantia de mão de obra para emendas, fixação e acabamento"],
     u:["Instalar sobre concreto, asfalto (drenante ou não) ou pó de pedra compactado","Base firme, regular, limpa e preparada para escoar a água","Instalação por profissional qualificado, e dúvidas avisadas antes do corte"],
     n:["Poças persistentes causadas por base inadequada ou drenagem deficiente","Problemas de preparação incorreta do substrato","Eventos climáticos extremos, como inundações e vendavais"]}
   };
@@ -670,23 +787,23 @@ renderRes();
 /* ============ POSSO ============ */
 (function(){
   var D=[
-   ["Churrasco perto da grama","no","O calor de brasas e churrasqueiras derrete as fibras de forma permanente. A grama não propaga chama, mas não resiste ao calor intenso. Mantenha a churrasqueira afastada."],
+   ["Churrasco perto da grama","no","A grama não propaga chama, mas o calor intenso de brasas e churrasqueiras pode derreter e danificar os fios de forma permanente. Mantenha a churrasqueira afastada."],
    ["Vela, cigarro, brasa ou fogos","no","Brasas, cigarros, velas e fogos de artifício podem derreter e danificar as fibras de forma permanente. Mantenha tudo isso afastado."],
    ["Lavadora de alta pressão","care","Pode, com jato aberto em leque e a pelo menos 1 metro de distância. Nunca use jato concentrado ou direto, principalmente em emendas e bordas."],
-   ["Futebol ou futevôlei","no","Esta linha é para uso paisagístico. Esporte não é indicado e pode causar danos que não são de fabricação. Para quadras e treinos, peça a linha esportiva."],
+   ["Futebol ou futevôlei","care","Pode, para uso recreativo em casa, com os devidos cuidados: prefira tênis ou calçado sem trava e escove os fios com mais frequência, porque o pisoteio concentra desgaste nos pontos de mais uso. Não é recomendada para uso profissional, competitivo ou de treino intenso: para isso, existe a linha esportiva."],
    ["Vaso ou móvel pesado","care","Pode, mas não parado no mesmo lugar por muito tempo. Use chapas, tábuas ou protetores para distribuir o peso e mude de lugar de tempos em tempos. Marcas leves saem com escovação e sol."],
    ["Arrastar móveis","no","Arrastar peças puxa e marca as fibras. Levante em vez de arrastar e proteja os pés dos móveis."],
    ["Água e sabão neutro","yes","É a limpeza recomendada para manchas: água abundante e sabão neutro, enxaguando bem."],
-   ["Vassoura macia, soprador ou aspirador","yes","Ótimos para folhas, galhos e poeira. Use vassoura de cerdas sintéticas macias."],
+   ["Vassoura de cerdas macias","yes","Ótima para folhas, galhos e poeira. Use vassoura de cerdas sintéticas macias."],
    ["Escova de aço","no","Escova metálica é abrasiva e danifica as fibras. Prefira vassoura de cerdas sintéticas macias ou escova própria para grama sintética."],
    ["Thinner, acetona ou gasolina","no","Solventes danificam as fibras. Evite também álcool concentrado, óleos, alvejante com cloro, ácidos e bases fortes."],
-   ["Tinta ou verniz","no","Tintas e vernizes mancham e danificam. Proteja a área ao pintar por perto e, se cair tinta, fale com a BrasilGrass antes de tentar remover."],
+   ["Tinta ou verniz","no","Tintas e vernizes mancham e danificam os fios. Proteja bem a área ao pintar por perto."],
    ["Água de piscina (cloro)","care","Cloro em exposição prolongada pode manchar ou degradar as fibras. Respingos acontecem: enxágue logo com água limpa e abundante."],
    ["Adubo, fertilizante ou pesticida","care","Em contato prolongado podem manchar ou alterar a cor. Se houver contato, enxágue imediatamente com bastante água."],
-   ["Salto fino ou chuteira de trava","no","Saltos finos, travas e elementos pontiagudos podem perfurar ou arrancar as fibras."],
-   ["Passar ou estacionar veículo","no","O tráfego de veículos automotores não é indicado para esta linha."],
+   ["Salto fino ou chuteira de trava","no","Saltos finos e travas altas (como as de chuteira de campo) podem perfurar ou arrancar as fibras. Para jogar bola, prefira tênis ou calçado sem trava."],
+   ["Passar ou estacionar veículo","care","Manobrar com cuidado, sem giro brusco das rodas, é possível. Estacionar sobre a grama deve ser evitado: o peso marca e pode danificar os fios."],
    ["Pets","care","Em áreas pet, confirme antes se a linha é adequada. Recolha as fezes logo e enxágue a urina. Produtos adicionais só com indicação técnica."],
-   ["Crianças brincando","care","Serve para lazer contemplativo, mas não substitui piso de segurança contra quedas. Ao sol a superfície esquenta: confira a temperatura antes do contato de crianças e animais."],
+   ["Crianças brincando","care","Sim, crianças podem brincar na grama indicada para esse ambiente. Porém, a grama, sozinha, não oferece proteção contra quedas nem substitui um piso de amortecimento adequado sob brinquedos. Ao sol, confira a temperatura antes do uso."],
    ["Reflexo de janela ou espelho","care","Reflexos concentrados podem gerar calor suficiente para derreter as fibras. Se sua instalação fica perto de vidros ou superfícies espelhadas, fale com a gente."]
   ];
   var W={yes:["PODE","Sem restrições","yes"],care:["COM CUIDADO","Pode, seguindo a orientação","care"],no:["NÃO","Evite, por causa do risco às fibras","no"]};
@@ -704,11 +821,11 @@ renderRes();
   var D=[
    ["Fios achatados ou deitados","ok","Normal do uso","Isso é comum","Acomodação e achatamento dos fios acontecem com o uso. Escove no sentido contrário ao deitamento, com cerdas sintéticas macias. Marcas leves de compressão saem com escovação e sol. Se mesmo assim não voltarem, envie fotos para avaliarmos."],
    ["Soltando pequenas partículas","ok","Normal do uso","Em pequena quantidade, é esperado","A fibrilação e uma pequena liberação de partículas, dentro dos parâmetros normais, fazem parte do desgaste natural do material. Se a perda de fios for intensa ou a grama estiver esfarelando, vale a avaliação: envie fotos."],
-   ["Uma mancha apareceu","ok","Normal do uso","Vale tentar a limpeza","Use água abundante e sabão neutro e enxágue bem. Se foi produto químico, enxágue na hora com bastante água. Se a mancha não sair, mande uma foto para orientarmos."],
+   ["Uma mancha apareceu","ok","Normal do uso","Vale tentar a limpeza","Use água abundante e sabão neutro e enxágue bem. Se foi produto químico, enxágue na hora com bastante água."],
    ["A cor está desbotando","ev","Vale avaliar","Isso entra na análise","Desbotamento por UV acima de 15% é analisado dentro da garantia. Se houve contato com tinta, fertilizante ou químicos, a causa pode ser externa. Nos dois casos, envie fotos: a análise é caso a caso."],
    ["Fios soltando da base (backing)","ev","Vale avaliar","Isso é uma das coberturas","O descolamento dos fios do backing é uma das coberturas da garantia. Evite consertar antes de nos avisar: fotografe de perto e fale com a gente."],
-   ["Poça de água que não some","ev","Vale avaliar","Primeiro, olhe os furos","Terra e folhas bloqueiam a drenagem. Limpe os furos do backing e os ralos. Se a poça persistir, a base e a drenagem precisam de avaliação. Problemas que nascem da base não são defeito do produto, mas avaliamos o seu caso."],
-   ["Fios derretidos ou com marca de queimado","ex","Provável causa externa","O calor costuma ser a origem","Brasas, churrasqueira, vela, cigarro ou reflexo de vidros derretem as fibras e não são defeito de fabricação. Mesmo assim, envie fotos: avaliamos a causa e orientamos."],
+   ["Poça de água que não some","ev","Vale avaliar","Costuma vir da base","Poça que não some costuma estar ligada à base ou ao caimento do piso. A base e a drenagem precisam de avaliação. Problemas que nascem da base não são defeito do produto, mas avaliamos o seu caso."],
+   ["Fios derretidos ou com marca de queimado","ex","Provável causa externa","O calor costuma ser a origem","Brasas, churrasqueira, vela, cigarro ou reflexo de vidros podem derreter e danificar os fios e não são defeito de fabricação. Mesmo assim, envie fotos: avaliamos a causa e orientamos."],
    ["Corte, furo ou rasgo","ex","Provável causa externa","Costuma vir de objetos","Cortes e perfurações por objetos são causas externas, não defeito de fabricação. Envie fotos: orientamos o reparo, que, fora da garantia, depende de orçamento e da sua autorização prévia."]
   ];
   var cls={ok:"b-ok",ev:"b-ev",ex:"b-ex"};
@@ -731,7 +848,8 @@ function buildMsg(){
   L.push("Nome: "+(n||"[seu nome]"));
   L.push("Pedido/comprovante: "+(p||"[número]"));
   L.push("Modelo: "+(m||"[modelo]"));
-  var dd=parseD(dv);L.push("Entrega/instalação: "+(dd&&!isNaN(dd)?fmt(dd):"[data]"));
+  var dd=parseD(dv);L.push("Data da compra/entrega: "+(dd&&!isNaN(dd)?fmt(dd):"[data]"));
+  var fi=$("#f-ins").value;if(fi)L.push("Instalação feita por: "+fi);
   L.push("Uso da área: "+($("#u30").checked?"comercial ou tráfego moderado":"residencial leve"));
   L.push("O que aconteceu: "+(ds||"[descreva o que viu e quando percebeu]"));
   if(an.length){L.push("");L.push("Vou enviar: "+an.join(", ")+".")}
@@ -741,7 +859,7 @@ function buildMsg(){
   $("#b-em").href="mailto:"+MAIL+"?subject="+encodeURIComponent("Solicitação de atendimento de garantia")+"&body="+encodeURIComponent(t);
   return t;
 }
-$$("#builder input,#builder textarea").forEach(function(e){e.addEventListener("input",buildMsg);e.addEventListener("change",buildMsg)});
+$$("#builder input,#builder textarea,#builder select").forEach(function(e){e.addEventListener("input",buildMsg);e.addEventListener("change",buildMsg)});
 $$("input[name=uso]").forEach(function(r){r.addEventListener("change",buildMsg)});
 $("#b-cp").addEventListener("click",function(){
   var t=buildMsg();
@@ -753,25 +871,28 @@ buildMsg();
 /* ============ FAQ ============ */
 (function(){
   var Q=[
-   ["Cobertura","Quanto tempo dura a garantia?","12 meses, contados a partir da data da sua compra (dia do pagamento do pedido), e não da data da instalação."],
+   ["Cobertura","Quanto tempo dura a garantia?","Para a grama de jardim e paisagismo, 12 meses, contados a partir da data da sua compra (dia do pagamento do pedido), e não da data da instalação. Outras linhas têm prazo próprio."],
+   ["Cobertura","A garantia da instalação é a mesma do produto?","Não, são duas garantias separadas. A do produto cobre defeitos da grama (12 meses). A da instalação cobre falhas de execução do serviço feito pela BrasilGrass, por 90 dias após a conclusão."],
+   ["Instalação","Como funciona a garantia da instalação feita pela BrasilGrass?","Há garantia de mão de obra de 90 dias após a conclusão do serviço, para falhas de execução, como emendas abertas, falhas de fixação ou acabamento. Fale direto com a BrasilGrass e avaliamos cada caso."],
    ["Cobertura","O que está coberto?","Defeitos de fabricação, desbotamento por UV acima de 15%, perda de resistência à tração das fibras e descolamento dos fios do backing, que é a base da grama."],
    ["Cobertura","Isso substitui meus direitos como consumidor?","Não. A garantia da BrasilGrass complementa a garantia legal do Código de Defesa do Consumidor, que continua valendo e independe de termo escrito."],
    ["Cobertura","Os fios estão achatados ou soltando pequenas partículas. É defeito?","Em geral, não: acomodação das fibras, fibrilação e pequena liberação de partículas dentro do normal são esperadas. Se a perda de fios for intensa, houver esfarelamento ou desbotamento acentuado, mande fotos para avaliarmos."],
    ["Cobertura","Perco toda a garantia se algo externo acontecer?","Não automaticamente. Cada caso é avaliado pela causa do problema."],
-   ["Cobertura","Quem paga a reinstalação, se o material for trocado?","A garantia contratual cobre o reparo ou a troca do material defeituoso. Reinstalação, mão de obra e deslocamento não fazem parte dela, sem prejuízo dos seus direitos previstos em lei. Qualquer serviço cobrado depende de orçamento e da sua autorização prévia."],
+   ["Cobertura","Quem paga a reinstalação, se o material for trocado?","Depende da causa e do que foi contratado. Confirmado um defeito coberto, a BrasilGrass indica a solução e avalia, caso a caso, os custos envolvidos, sempre respeitando seus direitos como consumidor. Qualquer serviço cobrado depende de orçamento e da sua autorização prévia."],
    ["Cobertura","Tempestade, granizo ou vendaval estragaram a grama. Tem garantia?","Danos por eventos climáticos extremos, vandalismo, mau uso ou caso fortuito não são defeitos de fabricação."],
    ["Cuidados","Preciso mesmo fazer manutenção?","Sim, ela preserva a aparência e a vida útil da grama, e você mesmo pode fazer. Anotar a data das limpezas ajuda na análise, mas não é obrigatório."],
    ["Cuidados","Com que frequência escovar?","A cada 60 dias em área residencial de uso leve e a cada 30 dias em área comercial ou de tráfego moderado, com vassoura de cerdas sintéticas macias, sempre contra o sentido de deitamento dos fios."],
-   ["Cuidados","Como limpar a grama?","Retire folhas, galhos e poeira com vassoura macia, soprador ou aspirador. Para manchas, use água abundante e sabão neutro e enxágue bem."],
+   ["Cuidados","Como limpar a grama?","Retire folhas, galhos e poeira com vassoura de cerdas macias. Para manchas, use água abundante e sabão neutro e enxágue bem."],
    ["Cuidados","Posso usar lavadora de alta pressão?","Pode, a pelo menos 1 metro de distância e com jato aberto em leque. Nunca jato concentrado, principalmente em emendas e bordas."],
-   ["Cuidados","Posso fazer churrasco ou acender vela perto?","Mantenha afastado. A grama não propaga chama, mas o calor de brasas, churrasqueira, fogueira, velas, cigarros e fogos derrete as fibras de forma permanente. Cuidado também com o reflexo de janelas e superfícies espelhadas."],
-   ["Cuidados","Posso usar para futebol, futevôlei ou treino?","Não. Esta linha é para uso paisagístico e de lazer contemplativo. Para esporte, peça a linha esportiva."],
+   ["Cuidados","Posso fazer churrasco ou acender vela perto?","Mantenha afastado. A grama não propaga chama, mas o calor intenso de brasas, churrasqueira, fogueira, velas, cigarros e fogos pode derreter e danificar os fios de forma permanente. Cuidado também com o reflexo de janelas e superfícies espelhadas."],
+   ["Cuidados","Posso jogar bola (futebol, futevôlei) na grama?","Pode, para uso recreativo em casa, com os devidos cuidados: prefira tênis ou calçado sem trava e escove os fios com mais frequência, porque o pisoteio concentra desgaste nos pontos de mais uso. Não é recomendada para uso profissional, competitivo ou de treino intenso: para isso, existe a linha esportiva."],
    ["Cuidados","Posso colocar móveis e vasos em cima?","Pode, com cuidado: use chapas, tábuas ou protetores para distribuir o peso e mude os objetos de lugar de tempos em tempos. Evite arrastar móveis e apoiar peças com pontas ou pés muito estreitos."],
+   ["Cuidados","Posso estacionar ou manobrar o carro sobre a grama?","O ideal é manobrar com cuidado, sem giro brusco das rodas. Estacionar é melhor evitar: o peso do veículo parado marca a grama e pode danificar os fios."],
    ["Cuidados","Piscina e adubo estragam a grama?","Exposição prolongada a cloro, fertilizantes e pesticidas pode manchar ou degradar as fibras. Em caso de contato, enxágue logo com água limpa e abundante."],
    ["Instalação","Onde a grama deve ser instalada?","Sobre concreto, asfalto (drenante ou não) ou pó de pedra compactado, com base firme, regular e que escoe a água. A instalação deve ser feita por profissional qualificado."],
-   ["Instalação","Há poças que não somem. Está coberto?","Antes de tudo, confira se os furos do backing e os ralos estão livres de terra e folhas. Se persistir, a base e a drenagem precisam de avaliação. Problemas causados pela base de instalação não são defeito do produto."],
-   ["Instalação","Contratei a instalação com outro profissional. E agora?","A responsabilidade é avaliada conforme a causa de cada problema. A garantia do produto continua valendo para defeitos sem relação com o serviço de instalação."],
-   ["Atendimento","O que preciso enviar para acionar a garantia?","Nome, número do pedido ou comprovante de pagamento (e a nota fiscal, se foi emitida), modelo, data de entrega ou instalação, descrição do problema e de como a área é usada, fotos gerais e de perto e, se possível, um vídeo curto."],
+   ["Instalação","Há poças que não somem. Está coberto?","Poça que não some costuma estar ligada à base ou ao caimento do piso. A base e a drenagem precisam de avaliação, que considera o que foi contratado e a causa. Problemas que nascem da base não são defeito do produto, mas avaliamos cada caso."],
+   ["Instalação","Contratei a instalação com outro profissional. E agora?","A responsabilidade é avaliada conforme a causa de cada problema. A garantia do produto continua valendo para defeitos sem relação com o serviço de instalação. A garantia de 90 dias de mão de obra vale para a instalação feita pela BrasilGrass."],
+   ["Atendimento","O que preciso enviar para acionar a garantia?","Nome, número do pedido ou comprovante de pagamento (e a nota fiscal, só se foi emitida), modelo, data da compra, data da instalação (se houve) e quem instalou, descrição do problema e de como a área é usada, fotos gerais e de perto e, se possível, um vídeo curto."],
    ["Atendimento","O que acontece depois que eu enviar?","A BrasilGrass avalia o caso, podendo pedir mais informações, fazer inspeção e envolver o fabricante. Confirmado o defeito coberto, o material é reparado ou substituído, sem custo pelo material."],
    ["Atendimento","Posso consertar ou retirar a área afetada antes?","Sempre que possível, espere as orientações. Se precisar intervir por segurança, fotografe antes e avise a BrasilGrass."],
    ["Atendimento","Perdi o comprovante ou não recebi nota fiscal. E agora?","Sem problema: a garantia conta da data da compra, e localizamos o seu pedido com os dados (nome, data e número do pedido). Guarde o comprovante de pagamento assim que receber."]
